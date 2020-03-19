@@ -9,15 +9,25 @@
   font-family: 'Arial', sans-serif;
 }
 
-body {
-  padding: 0 5%;
+html {
+  font-size: 62.5%;
 }
 
 .container {
   display: grid;
-  grid-template-areas: 'allCases especificCountry' 'allCountries allCountries';
+  grid-template-areas: 'title title' 'allCases especificCountry' 'allCountries allCountries';
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid #333;
+  margin: 0;
+  background: #fff;
+}
+
+h1.title {
+  grid-area: title;
+  padding: 20px 50px;
+  font-size: 3rem;
+  background: rgb(121, 121, 246);
+  color: white;
 }
 
 .all-cases,
@@ -29,15 +39,20 @@ body {
   flex-direction: column;
   padding: 50px;
   border-bottom: 1px solid #333;
+  margin: 0 3vw;
+}
+
+.all-countries {
+  border-bottom: 0;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   padding: 30px 0;
 }
 
 h1 select {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-left: 10px;
 }
 
@@ -57,8 +72,13 @@ td {
   text-align: left;
   padding: 20px;
   padding-left: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border-bottom: 1px solid #d9d9d9;
+}
+
+td.big {
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 tr td:first-of-type {
@@ -69,15 +89,41 @@ tr td:first-of-type {
   font-weight: bold;
 }
 
-@media screen and (max-width: 440px) {
+@media (max-width: 600px) {
   .container {
+    margin: 0;
     display: grid;
-    grid-template-areas: 'allCases' ' especificCountry' 'allCountries';
+    grid-template-areas: 'title' 'allCases' ' especificCountry' 'allCountries';
+    grid-template-columns: 1fr;
+  }
+  h1.title {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
   }
   .all-cases,
   .especific-country,
   .all-countries {
+    margin: 0 10px;
     padding: 30px 0;
     border-bottom: 1px solid #333;
+  }
+}
+
+@media (max-width: 570px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 505px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 470px) {
+  html {
+    font-size: 35%;
   }
 }

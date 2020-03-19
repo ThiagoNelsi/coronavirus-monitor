@@ -21,15 +21,15 @@ function AllCases({ axios }) {
       <tbody>
         <tr>
           <td>Casos</td>
-          <td>{data.cases}</td>
+          <td className='big'>{data.cases}</td>
         </tr>
         <tr>
           <td>Mortes</td>
-          <td>{data.deaths}</td>
+          <td className='big'>{data.deaths}</td>
         </tr>
         <tr>
           <td>Recuperados</td>
-          <td>{data.recovered}</td>
+          <td className='big'>{data.recovered}</td>
         </tr>
       </tbody>
     </table>

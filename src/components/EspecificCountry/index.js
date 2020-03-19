@@ -29,7 +29,7 @@ function EspecificCountry({ axios }) {
   return (
     <div className='especific-country'>
       <h1>Casos no:
-          <select value='Brazil' onChange={(e) => setCountry(e.target.value)}>
+          <select value={country} onChange={(e) => setCountry(e.target.value)}>
           {countriesList.sort().map(c => (
             <option key={c} value={c}>{c}</option>
           ))}
@@ -43,31 +43,35 @@ function EspecificCountry({ axios }) {
           </tr>
           <tr>
             <td>Número de casos</td>
-            <td>{data.cases}</td>
+            <td className='big'>{data.cases}</td>
           </tr>
           <tr>
             <td>Novos casos hoje</td>
-            <td>{data.todayCases}</td>
+            <td className='big'>{data.todayCases}</td>
           </tr>
           <tr>
             <td>Número de mortes</td>
-            <td>{data.deaths}</td>
+            <td className='big'>{data.deaths}</td>
           </tr>
           <tr>
             <td>Número de mortes hoje</td>
-            <td>{data.todayDeaths}</td>
+            <td className='big'>{data.todayDeaths}</td>
           </tr>
           <tr>
             <td>Número de curados</td>
-            <td>{data.recovered}</td>
+            <td className='big'>{data.recovered}</td>
           </tr>
           <tr>
             <td>Casos ativos</td>
-            <td>{data.active}</td>
+            <td className='big'>{data.active}</td>
           </tr>
           <tr>
             <td>Casos criticos</td>
-            <td>{data.critical}</td>
+            <td className='big'>{data.critical}</td>
+          </tr>
+          <tr>
+            <td>Casos a por milhão de habitantes</td>
+            <td className='big'>{data.casesPerOneMillion}</td>
           </tr>
         </tbody>
       </table>

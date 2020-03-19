@@ -32,10 +32,10 @@ function CountriesCases({ axios }) {
           return (
             <tr key={country}>
               <td>{country}</td>
-              <td>{cases}</td>
-              <td>{todayCases}</td>
-              <td>{deaths}</td>
-              <td>{todayDeaths}</td>
+              <td className='big'>{cases}</td>
+              <td className='big'>{todayCases}</td>
+              <td className='big'>{deaths}</td>
+              <td className='big'>{todayDeaths}</td>
             </tr>
           );
 
